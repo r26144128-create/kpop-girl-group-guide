@@ -7,6 +7,8 @@
   <meta name="description" content="NMIXX 新手入坑指南：一句話介紹、團體特色、入門歌曲、推薦舞台、成員亮點。">
   <!-- 這個檔案在 groups/ 資料夾裡，所以要用 ../ 回到上一層找 css -->
   <link rel="stylesheet" href="../css/style.css">
+  <!-- NMIXX 專屬的首屏與裝飾樣式（所有選擇器都以 .group-nmixx 開頭） -->
+  <link rel="stylesheet" href="../css/groups/nmixx.css">
 </head>
 <body class="group-nmixx">
 
@@ -19,19 +21,60 @@
         <ul>
           <li><a href="../index.html">首頁</a></li>
           <li><a href="nmixx.html" aria-current="page">NMIXX</a></li>
+          <li><a href="twice.html">TWICE</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- ===== 區塊 1：基本資料＋一句話介紹 ===== -->
-    <section class="hero">
-      <div class="container">
-        <a class="back-link" href="../index.html">← 回首頁</a>
-        <h1>NMIXX</h1>
-        <p class="one-liner">一首歌裡塞好幾種曲風、唱跳都超扎實的六人團，第一次聽會驚訝，越聽越上頭。</p>
+    <!-- ===== 區塊 1：基本資料＋一句話介紹 =====
+         首屏是一張「海洋專輯封面」，依官方手燈的白色鯨魚與寶藍色水做原創詮釋。
+         圖層由後到前：珠光粉彩背景 → 鯨魚噴出的水柱（穿過 NMIXX 大字後方）→ NMIXX 大字
+         → 後層海浪 → 白色鯨魚與海豚（設計靈感）→ 前層海浪 -->
+    <section class="ocean-hero" aria-labelledby="group-title">
+      <!-- 背景的珠光與細線（純裝飾） -->
+      <div class="ocean-light" aria-hidden="true"></div>
 
+      <div class="container hero-inner">
+        <div class="hero-topline">
+          <a class="back-link" href="../index.html">← 回首頁</a>
+          <span class="kicker">GIRL GROUP GUIDE · No.01</span>
+        </div>
+
+        <h1 id="group-title" class="wordmark">NMIXX</h1>
+
+        <p class="one-liner">一首歌裡塞好幾種曲風、唱跳都超扎實的六人團，第一次聽會驚訝，越聽越上頭。</p>
+      </div>
+
+      <!-- 鯨魚噴出的水柱：從海面一路往上沖，經過 NMIXX 大字後方 -->
+      <div class="water-column" aria-hidden="true"></div>
+
+      <!-- 後層海浪（寶藍漩渦） -->
+      <svg class="wave wave-back" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 90 C120 50 240 40 360 70 C480 100 560 130 720 90 C880 50 960 40 1080 70 C1200 100 1320 110 1440 80 L1440 200 L0 200 Z"/>
+      </svg>
+      <svg class="wave wave-mid" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 80 C160 120 300 120 440 80 C580 40 640 30 720 60 C800 90 880 120 1040 90 C1200 60 1320 60 1440 90 L1440 180 L0 180 Z"/>
+      </svg>
+
+      <!-- 浮在浪頭上、尾巴翹起的白色鯨魚（官方手燈象徵） -->
+      <img class="hero-whale" src="../images/nmixx/whale.svg" alt="" aria-hidden="true">
+      <!-- 躍出水面的海豚（設計靈感） -->
+      <img class="hero-dolphin" src="../images/nmixx/dolphin.svg" alt="" aria-hidden="true">
+      <div class="bubbles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <!-- 前層海浪：顏色和下方內容的底色接起來 -->
+      <svg class="wave wave-front" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 50 C160 85 320 85 480 50 C640 15 800 15 960 50 C1120 85 1280 85 1440 50 L1440 120 L0 120 Z"/>
+      </svg>
+    </section>
+
+    <!-- 基本資料卡：緊接在首屏下方，往上疊在海浪上 -->
+    <section class="profile-section">
+      <div class="container">
         <div class="card profile">
           <dl>
             <dt>出道日期</dt>
@@ -46,6 +89,9 @@
         </div>
       </div>
     </section>
+
+    <!-- 段落分隔：鯨尾＋水波線 -->
+    <div class="section-divider" aria-hidden="true"><img src="../images/nmixx/whale-tail.svg" alt=""></div>
 
     <!-- ===== 區塊 2：團體特色 ===== -->
     <section>
@@ -77,6 +123,9 @@
         </div>
       </div>
     </section>
+
+    <!-- 段落分隔：鯨尾＋水波線 -->
+    <div class="section-divider" aria-hidden="true"><img src="../images/nmixx/whale-tail.svg" alt=""></div>
 
     <!-- ===== 區塊 3：入門歌曲 =====
          正式版：3 首（CLAUDE.md 規定 3–5 首），影片皆為 JYP 官方頻道。
@@ -112,6 +161,9 @@
       </div>
     </section>
 
+    <!-- 段落分隔：鯨尾＋水波線 -->
+    <div class="section-divider" aria-hidden="true"><img src="../images/nmixx/whale-tail.svg" alt=""></div>
+
     <!-- ===== 區塊 4：推薦舞台 =====
          正式版：2 個（CLAUDE.md 規定 2–4 個），影片皆為節目官方頻道 -->
     <section>
@@ -134,6 +186,9 @@
         </article>
       </div>
     </section>
+
+    <!-- 段落分隔：鯨尾＋水波線 -->
+    <div class="section-divider" aria-hidden="true"><img src="../images/nmixx/whale-tail.svg" alt=""></div>
 
     <!-- ===== 區塊 5：成員亮點 =====
          藝名、亮點介紹必填；擔當／位置、代表片段選填。
@@ -188,6 +243,9 @@
         </div>
       </div>
     </section>
+
+    <!-- 段落分隔：鯨尾＋水波線 -->
+    <div class="section-divider" aria-hidden="true"><img src="../images/nmixx/whale-tail.svg" alt=""></div>
 
     <!-- ===== 區塊 6：下一步去哪裡 ===== -->
     <section>

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- ===== 頁首與導覽列 ===== -->
+  <!-- ===== 頁首與導覽列（全站共用） ===== -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="site-title" href="index.html">K-pop 女團入坑指南</a>
@@ -18,72 +18,114 @@
         <ul>
           <li><a href="index.html" aria-current="page">首頁</a></li>
           <li><a href="groups/nmixx.html">NMIXX</a></li>
+          <li><a href="groups/twice.html">TWICE</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- ===== 開場介紹 ===== -->
-    <section class="hero">
+    <!-- ===== 雜誌首屏：刊頭＋大標題＋開場介紹＋編輯小提示 ===== -->
+    <section class="mag-hero">
       <div class="container">
-        <h1>想認識 K-pop 女團，<br>但不知道從哪裡開始？</h1>
-        <p class="lead">
-          這裡是給新手的入坑小指南。不用先記一堆名字，也不用懂圈內用語，
-          先看下面的卡片，挑一團順眼的點進去，聽一首歌、看一個舞台就好。
-          喜歡的話再慢慢挖，不喜歡就換下一團，完全沒壓力！
-        </p>
-      </div>
-    </section>
+        <!-- 刊頭 -->
+        <div class="masthead" aria-hidden="true">
+          <span>K-POP GIRL GROUP GUIDE</span>
+          <span>VOL.01 · 2026.11</span>
+        </div>
 
-    <!-- ===== 新手小提示 ===== -->
-    <section class="tips">
-      <div class="container">
-        <h2>入坑前的三個小提示</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>1. 先聽再看</h3>
-            <p>先挑一首入門歌曲聽聽看。耳朵喜歡了，再去看 MV 和舞台，會更有感。</p>
+        <div class="mag-hero-grid">
+          <div>
+            <span class="kicker">ISSUE 01｜新手特輯</span>
+            <h1>想認識 K-pop 女團，<br>但不知道從哪裡開始？</h1>
+            <p class="lead">
+              這裡是給新手的入坑小指南。不用先記一堆名字，也不用懂圈內用語，
+              先看下面的卡片，挑一團順眼的點進去，聽一首歌、看一個舞台就好。
+              喜歡的話再慢慢挖，不喜歡就換下一團，完全沒壓力！
+            </p>
+            <a class="btn-start" href="#covers">從封面挑一團開始 ↓</a>
           </div>
-          <div class="card">
-            <h3>2. 舞台比 MV 更真實</h3>
-            <p>「打歌舞台」就是團體上音樂節目表演新歌。MV 看氣氛，舞台看唱功和舞蹈，兩種都看最完整。</p>
-          </div>
-          <div class="card">
-            <h3>3. 先記住一個人</h3>
-            <p>不用一次認全部成員。先找到一個讓你眼睛一亮的人，其他人自然會慢慢認得。</p>
-          </div>
+
+          <!-- 編輯小提示（雜誌側欄） -->
+          <aside class="editor-notes" aria-labelledby="tips-title">
+            <h2 id="tips-title">入坑前的三個小提示</h2>
+            <ol>
+              <li>
+                <span class="num">01</span>
+                <h3>先聽再看</h3>
+                <p>先挑一首入門歌曲聽聽看。耳朵喜歡了，再去看 MV 和舞台，會更有感。</p>
+              </li>
+              <li>
+                <span class="num">02</span>
+                <h3>舞台比 MV 更真實</h3>
+                <p>「打歌舞台」就是團體上音樂節目表演新歌。MV 看氣氛，舞台看唱功和舞蹈，兩種都看最完整。</p>
+              </li>
+              <li>
+                <span class="num">03</span>
+                <h3>先記住一個人</h3>
+                <p>不用一次認全部成員。先找到一個讓你眼睛一亮的人，其他人自然會慢慢認得。</p>
+              </li>
+            </ol>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- ===== 女團卡片列表 =====
-         新增女團時：在這裡複製一張 group-card，改團名、一句話介紹、標籤、連結 -->
-    <section>
+    <!-- ===== 本期封面（女團卡片列表） =====
+         新增女團時：複製一張 cover-card，改 group-團名、期數、代表物圖、團名、一句話介紹、標籤、連結，
+         放在「下期預告」卡之前 -->
+    <section id="covers">
       <div class="container">
-        <h2>挑一團開始吧</h2>
-        <p class="section-intro">點卡片就能進入介紹頁。</p>
-        <div class="grid">
+        <div class="covers-head">
+          <h2>挑一團開始吧</h2>
+          <p class="section-intro">點卡片就能進入介紹頁。</p>
+        </div>
 
-          <!-- NMIXX 卡片 -->
-          <a class="card group-card group-nmixx" href="groups/nmixx.html">
-            <div class="cover" aria-hidden="true">NMIXX</div>
-            <div class="card-body">
-              <h3>NMIXX</h3>
+        <div class="covers-grid">
+
+          <!-- No.01 NMIXX 封面卡 -->
+          <a class="cover-card group-nmixx" href="groups/nmixx.html">
+            <div class="cover-art">
+              <span class="issue-no">No.01</span>
+              <img class="cover-motif" src="images/nmixx/whale-tail-light.svg" alt="" aria-hidden="true">
+              <span class="cover-name">NMIXX</span>
+            </div>
+            <div class="cover-text">
               <p>一首歌裡塞好幾種曲風、唱跳都超扎實的六人團，第一次聽會驚訝，越聽越上頭。</p>
               <ul class="tag-list">
                 <li class="tag">曲風多變</li>
                 <li class="tag">現場唱功</li>
                 <li class="tag">高難度舞蹈</li>
               </ul>
-              <span class="more">去認識她們 →</span>
+              <span class="more">翻開這一團 →</span>
             </div>
           </a>
 
-          <!-- 尚未開放的佔位卡片（之後新增女團時替換掉） -->
-          <div class="card group-card coming-soon">
-            <div class="cover" aria-hidden="true">?</div>
-            <div class="card-body">
+          <!-- No.02 TWICE 封面卡 -->
+          <a class="cover-card group-twice" href="groups/twice.html">
+            <div class="cover-art">
+              <span class="issue-no">No.02</span>
+              <img class="cover-motif" src="images/twice/lollipop-light.svg" alt="" aria-hidden="true">
+              <span class="cover-name">TWICE</span>
+            </div>
+            <div class="cover-text">
+              <p>九個人的甜美能量，從洗腦副歌到治癒情歌都拿手，是很多人入坑 K-pop 的第一團。</p>
+              <ul class="tag-list">
+                <li class="tag">洗腦副歌</li>
+                <li class="tag">重點舞</li>
+                <li class="tag">九人團</li>
+              </ul>
+              <span class="more">翻開這一團 →</span>
+            </div>
+          </a>
+
+          <!-- 下期預告卡（永遠放在最後一格） -->
+          <div class="cover-card coming-soon">
+            <div class="cover-art">
+              <span class="issue-no">No.03</span>
+              <span class="cover-motif-text" aria-hidden="true">?</span>
+            </div>
+            <div class="cover-text">
               <h3>更多女團準備中</h3>
               <p>下一團會是誰呢？敬請期待。</p>
             </div>
@@ -94,7 +136,7 @@
     </section>
   </main>
 
-  <!-- ===== 頁尾 ===== -->
+  <!-- ===== 頁尾（全站共用） ===== -->
   <footer class="site-footer">
     <div class="container">
       <p>本站為生成式 AI 課程作業，非官方網站。</p>

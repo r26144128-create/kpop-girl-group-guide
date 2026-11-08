@@ -1,0 +1,213 @@
+/* =========================================
+   TWICE 專屬樣式：糖果專輯封面首屏＋棒棒糖段落分隔
+   規則：每個選擇器都以 .group-twice 開頭，只影響 TWICE 頁面
+   設計依據（觀察官方手燈與宣傳海報）：初代 Candy Bong 是粉白螺旋的圓形棒棒糖；
+   Candybong Z／∞ 發出杏桃橘到洋紅的光環；海報背景是粉色漸層加細格線。
+   官方雙色 Apricot（PANTONE 712C）、Neon Magenta（PANTONE 812C）。
+   這裡是原創詮釋，不畫手燈握柄、底座與 LOGO。
+   ========================================= */
+
+/* ---------- 1. 顏色 ---------- */
+.group-twice {
+  --bg: #fff8f4;          /* 閱讀區底色：很淡的蜜桃白 */
+  --berry: #8e1a4d;       /* 深莓紅：首屏大字 */
+  --apricot: #fcc89b;     /* 官方 Apricot */
+  --magenta: #ff5fa2;     /* 官方 Neon Magenta（只用在圖案，不用在小字） */
+}
+
+/* ---------- 2. 首屏：糖果專輯封面 ---------- */
+.group-twice .candy-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(600px, 86vh, 760px);
+  padding: 22px 0 200px;
+  color: var(--berry);
+  /* 蜜桃粉漸層 */
+  background: linear-gradient(160deg, #ffe4d1 0%, #ffd6e5 55%, #fff0f5 100%);
+}
+
+/* 第 1 層：細格線 */
+.group-twice .candy-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.65) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.65) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+
+/* 小星光 */
+.group-twice .sparkles span {
+  position: absolute;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 95, 162, 0.6);
+  animation: twice-twinkle 3s ease-in-out infinite alternate;
+}
+.group-twice .sparkles span:nth-child(1) { top: 18%; left: 9%;  font-size: 1.6rem; }
+.group-twice .sparkles span:nth-child(2) { top: 30%; left: 84%; font-size: 1.1rem; animation-delay: 1s; }
+.group-twice .sparkles span:nth-child(3) { top: 62%; left: 20%; font-size: 1rem;   animation-delay: 2s; }
+.group-twice .sparkles span:nth-child(4) { top: 12%; left: 62%; font-size: 0.9rem; animation-delay: 0.5s; }
+.group-twice .sparkles span:nth-child(5) { top: 56%; left: 92%; font-size: 1.4rem; animation-delay: 1.5s; }
+
+@keyframes twice-twinkle {
+  from { opacity: 0.35; transform: scale(0.85); }
+  to   { opacity: 1;    transform: scale(1.1); }
+}
+
+.group-twice .hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.group-twice .hero-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.group-twice .hero-topline .back-link { color: var(--berry); }
+.group-twice .hero-topline .kicker { color: var(--main); }
+
+/* 第 2、3 層：大棒棒糖斜放在 TWICE 大字後方 */
+.group-twice .wordmark-wrap {
+  position: relative;
+  margin: clamp(120px, 20vh, 170px) auto 0;
+  max-width: 900px;
+}
+
+.group-twice .hero-lollipop {
+  position: absolute;
+  z-index: 0;
+  width: clamp(190px, 22vw, 280px);
+  right: 2%;
+  top: -150px;
+  transform: rotate(20deg);
+  transform-origin: 50% 32%;
+  animation: twice-sway 6s ease-in-out infinite alternate;
+}
+
+@keyframes twice-sway {
+  from { transform: rotate(16deg); }
+  to   { transform: rotate(24deg); }
+}
+
+.group-twice .wordmark {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(4.6rem, 17vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  color: var(--berry);
+  text-shadow: 0 4px 0 #ffffff, 0 12px 30px rgba(142, 26, 77, 0.2);
+}
+
+/* 一句話介紹：白色半透明底 */
+.group-twice .candy-hero .one-liner {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 30px auto 0;
+  padding: 12px 20px;
+  text-align: center;
+  color: var(--berry);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(184, 35, 95, 0.15);
+  border-radius: 12px;
+}
+
+/* 第 4、6 層：糖霜波浪 */
+.group-twice .frosting {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+
+.group-twice .frosting-back {
+  bottom: 40px;
+  height: 140px;
+  z-index: 2;
+  fill: #ffb3cf;
+}
+
+.group-twice .frosting-front {
+  bottom: -1px;
+  height: 100px;
+  z-index: 5;
+  fill: var(--bg);
+}
+
+/* 第 5 層：反方向斜放的小棒棒糖（棒子藏在前層糖霜後面） */
+.group-twice .hero-lollipop-small {
+  position: absolute;
+  z-index: 3;
+  left: 6%;
+  bottom: 30px;
+  width: clamp(90px, 10vw, 140px);
+  transform: rotate(-22deg);
+}
+
+/* 漂浮的包裝紙糖果 */
+.group-twice .hero-candy {
+  position: absolute;
+  z-index: 4;
+  width: clamp(60px, 6vw, 90px);
+  animation: twice-float 4s ease-in-out infinite alternate;
+}
+.group-twice .candy-1 { left: 22%; bottom: 70px; transform: rotate(-12deg); }
+.group-twice .candy-2 { right: 18%; bottom: 96px; width: clamp(50px, 5vw, 72px); animation-delay: 1.2s; }
+.group-twice .candy-3 { right: 6%;  bottom: 40px; animation-delay: 2.4s; }
+
+@keyframes twice-float {
+  from { translate: 0 0; }
+  to   { translate: 0 -10px; }
+}
+
+/* ---------- 3. 基本資料卡：往上疊在糖霜邊緣上 ---------- */
+.group-twice .profile-section {
+  position: relative;
+  z-index: 7;
+  margin-top: -50px;
+  padding-top: 0;
+}
+
+/* ---------- 4. 段落分隔：迷你棒棒糖＋杏桃／洋紅雙色虛線 ---------- */
+.group-twice .section-divider::before,
+.group-twice .section-divider::after {
+  border-bottom: none;
+  height: 12px;
+  background: repeating-linear-gradient(90deg,
+    var(--apricot) 0 12px, transparent 12px 18px,
+    var(--magenta) 18px 30px, transparent 30px 36px) center / 100% 4px no-repeat;
+}
+.group-twice .section-divider img { width: 34px; }
+
+/* ---------- 5. 手機版 ---------- */
+@media (max-width: 640px) {
+  .group-twice .candy-hero {
+    min-height: 640px;
+    padding-bottom: 190px;
+  }
+
+  /* 大棒棒糖移到字的上方 */
+  .group-twice .wordmark-wrap { margin-top: 190px; }
+  .group-twice .hero-lollipop {
+    width: 42vw;
+    right: 6%;
+    top: -175px;
+  }
+
+  .group-twice .wordmark { font-size: 23vw; }
+  .group-twice .candy-hero .one-liner { font-size: 1rem; margin-top: 22px; }
+
+  .group-twice .hero-lollipop-small { width: 22vw; left: 3%; bottom: 24px; }
+  .group-twice .candy-1 { left: 30%; bottom: 60px; }
+  .group-twice .candy-2 { display: none; }
+  .group-twice .candy-3 { right: 4%; bottom: 46px; }
+  .group-twice .sparkles span:nth-child(n+4) { display: none; }
+}

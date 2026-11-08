@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWICE 入坑指南｜K-pop 女團入坑指南</title>
+  <meta name="description" content="TWICE 新手入坑指南：一句話介紹、團體特色、入門歌曲、推薦舞台、成員亮點。">
+  <!-- 這個檔案在 groups/ 資料夾裡，所以要用 ../ 回到上一層找 css -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- TWICE 專屬的首屏與裝飾樣式（所有選擇器都以 .group-twice 開頭） -->
+  <link rel="stylesheet" href="../css/groups/twice.css">
+</head>
+<body class="group-twice">
+
+  <!-- ===== 頁首與導覽列（和首頁一致） ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="../index.html">K-pop 女團入坑指南</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">選單 ☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="主選單">
+        <ul>
+          <li><a href="../index.html">首頁</a></li>
+          <li><a href="nmixx.html">NMIXX</a></li>
+          <li><a href="twice.html" aria-current="page">TWICE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 區塊 1：基本資料＋一句話介紹 =====
+         首屏是一張「糖果專輯封面」，設計靈感取自官方手燈 Candy Bong 的棒棒糖造型與官方雙色。
+         圖層由後到前：蜜桃粉漸層＋細格線 → 大棒棒糖（穿插在 TWICE 大字後方）→ TWICE 大字
+         → 粉色糖霜波浪 → 小棒棒糖與糖果 → 前層糖霜邊緣 -->
+    <section class="candy-hero" aria-labelledby="group-title">
+      <!-- 背景細格線（呼應官方手燈海報的格線背景，純裝飾） -->
+      <div class="candy-grid" aria-hidden="true"></div>
+      <div class="sparkles" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span><span>✦</span><span>✦</span></div>
+
+      <div class="container hero-inner">
+        <div class="hero-topline">
+          <a class="back-link" href="../index.html">← 回首頁</a>
+          <span class="kicker">GIRL GROUP GUIDE · No.02</span>
+        </div>
+
+        <!-- 大棒棒糖斜放在團名大字後方：糖球從字的右上角露出來，棒子從字的下緣穿出 -->
+        <div class="wordmark-wrap">
+          <img class="hero-lollipop" src="../images/twice/lollipop.svg" alt="" aria-hidden="true">
+          <h1 id="group-title" class="wordmark">TWICE</h1>
+        </div>
+
+        <p class="one-liner">九個人的甜美能量，從洗腦副歌到治癒情歌都拿手，是很多人入坑 K-pop 的第一團。</p>
+      </div>
+
+      <!-- 後層：粉色糖霜波浪 -->
+      <svg class="frosting frosting-back" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 70 C80 40 160 40 240 70 C320 100 400 100 480 70 C560 40 640 40 720 70 C800 100 880 100 960 70 C1040 40 1120 40 1200 70 C1280 100 1360 100 1440 70 L1440 160 L0 160 Z"/>
+      </svg>
+
+      <!-- 前景：反方向斜放的小棒棒糖與包裝紙糖果 -->
+      <img class="hero-lollipop-small" src="../images/twice/lollipop.svg" alt="" aria-hidden="true">
+      <img class="hero-candy candy-1" src="../images/twice/candy.svg" alt="" aria-hidden="true">
+      <img class="hero-candy candy-2" src="../images/twice/candy.svg" alt="" aria-hidden="true">
+      <img class="hero-candy candy-3" src="../images/twice/candy.svg" alt="" aria-hidden="true">
+
+      <!-- 前層糖霜邊緣：顏色和下方內容的底色接起來 -->
+      <svg class="frosting frosting-front" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 40 C60 70 120 70 180 40 C240 10 300 10 360 40 C420 70 480 70 540 40 C600 10 660 10 720 40 C780 70 840 70 900 40 C960 10 1020 10 1080 40 C1140 70 1200 70 1260 40 C1320 10 1380 10 1440 40 L1440 110 L0 110 Z"/>
+      </svg>
+    </section>
+
+    <!-- 基本資料卡：緊接在首屏下方，往上疊在糖霜邊緣上 -->
+    <section class="profile-section">
+      <div class="container">
+        <div class="card profile">
+          <dl>
+            <dt>出道日期</dt>
+            <dd>2015 年 10 月 20 日</dd>
+            <dt>所屬公司</dt>
+            <dd>JYP Entertainment</dd>
+            <dt>成員人數</dt>
+            <dd>9 人（Nayeon、Jeongyeon、Momo、Sana、Jihyo、Mina、Dahyun、Chaeyoung、Tzuyu）</dd>
+            <dt>粉絲名</dt>
+            <dd>ONCE</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 段落分隔：迷你棒棒糖＋雙色虛線 -->
+    <div class="section-divider" aria-hidden="true"><img src="../images/twice/lollipop-mini.svg" alt=""></div>
+
+    <!-- ===== 區塊 2：團體特色 ===== -->
+    <section>
+      <div class="container">
+        <h2>她們特別在哪裡？</h2>
+        <p class="section-intro">用三十秒認識 TWICE 跟別團不一樣的地方。</p>
+        <div class="grid">
+          <div class="card feature">
+            <h3>人人都能跟著跳的「重點舞」</h3>
+            <p>「重點舞」就是一段簡單好記、大家都能模仿的招牌動作。〈CHEER UP〉、〈TT〉、〈SIGNAL〉、〈What is Love?〉的重點舞，都曾紅到變成全民跟跳的流行。</p>
+          </div>
+          <div class="card feature">
+            <h3>一聽就記住的洗腦副歌</h3>
+            <p>歌曲明亮甜美、副歌很好跟唱。2016 年的〈CHEER UP〉是韓國當年成績最好的單曲，還拿下 Melon 音樂獎和 MAMA 的年度歌曲。</p>
+          </div>
+          <div class="card feature">
+            <h3>九人多國籍的大家庭</h3>
+            <p>五位韓國成員、三位日本成員、一位台灣成員，透過 2015 年的選秀節目《SIXTEEN》組成。日本成員 Mina、Sana、Momo 還組了小分隊 MISAMO。</p>
+          </div>
+          <div class="card feature">
+            <h3>從可愛到成熟，一路在長大</h3>
+            <p>出道初期以青春可愛聞名，2019 年的〈Feel Special〉開始唱出更真誠的心情。2025 年成員參與動畫《KPop 獵魔女團》的〈Takedown〉，創下團隊在美國 Billboard Hot 100 的最高名次。</p>
+          </div>
+          <div class="card feature">
+            <h3>每個人都能單獨發光</h3>
+            <p>Nayeon、Jihyo、Tzuyu、Chaeyoung 都已經 solo 出道，風格各不相同。聽完團體歌，還可以順著喜歡的成員繼續挖。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><img src="../images/twice/lollipop-mini.svg" alt=""></div>
+
+    <!-- ===== 區塊 3：入門歌曲 =====
+         正式版：3 首（CLAUDE.md 規定 3–5 首），影片皆為 JYP 官方頻道。
+         新增歌曲時，複製整個 <article class="card pick"> 區塊 -->
+    <section>
+      <div class="container">
+        <h2>入門歌曲</h2>
+        <p class="section-intro">先挑一首聽聽看，耳朵喜歡再往下挖。</p>
+
+        <article class="card pick">
+          <h3>CHEER UP</h3>
+          <p class="meta">發行年份：2016</p>
+          <p><span class="label">推薦理由：</span>入坑最經典的一首！副歌那句「shy shy shy」在韓國紅到變成流行語，這首也拿下 2016 年 Melon 音樂獎和 MAMA 的年度歌曲，是很多人認識 TWICE 的起點。</p>
+          <p><span class="label">適合誰聽：</span>喜歡明亮、有朝氣流行歌的人</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=c7rCyll5AeY" target="_blank" rel="noopener">看 MV（JYP 官方頻道）</a>
+        </article>
+
+        <article class="card pick">
+          <h3>TT</h3>
+          <p class="meta">發行年份：2016</p>
+          <p><span class="label">推薦理由：</span>雙手比成 T 字放在臉頰旁的「TT」手勢就是從這首來的，模仿的是哭臉表情符號。旋律可愛又帶點委屈，副歌很快就會跟著唱。</p>
+          <p><span class="label">適合誰聽：</span>喜歡可愛、俏皮風格的人</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=ePpPVE-GGJw" target="_blank" rel="noopener">看 MV（JYP 官方頻道）</a>
+        </article>
+
+        <article class="card pick">
+          <h3>Feel Special</h3>
+          <p class="meta">發行年份：2019</p>
+          <p><span class="label">推薦理由：</span>想看 TWICE 不只有可愛的一面就聽這首。歌詞是朴軫永和成員們聊過出道後的心情才寫的，唱的是「就算世界讓我失落，你讓我覺得自己很特別」，旋律優雅又很療癒。</p>
+          <p><span class="label">適合誰聽：</span>喜歡有故事、能帶來力量的歌的人</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=3ymwOvzhwHs" target="_blank" rel="noopener">看 MV（JYP 官方頻道）</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><img src="../images/twice/lollipop-mini.svg" alt=""></div>
+
+    <!-- ===== 區塊 4：推薦舞台 =====
+         正式版：2 個（CLAUDE.md 規定 2–4 個），影片皆為節目官方頻道 -->
+    <section>
+      <div class="container">
+        <h2>推薦舞台</h2>
+        <p class="section-intro">「打歌舞台」就是在音樂節目上的表演，最能看出唱功和舞蹈。</p>
+
+        <article class="card pick">
+          <h3>M Countdown｜CHEER UP</h3>
+          <p class="meta">播出日期：2016 年 4 月 28 日</p>
+          <p><span class="label">看點：</span>〈CHEER UP〉第一次在電視上公開的回歸舞台。注意副歌的重點舞和「shy shy shy」那一段，一週後她們就在同一個節目拿下這首歌的第一座音樂節目一位。</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=1Kg4yomNEgs" target="_blank" rel="noopener">看舞台（節目官方頻道）</a>
+        </article>
+
+        <article class="card pick">
+          <h3>人氣歌謠｜Feel Special</h3>
+          <p class="meta">播出日期：2019 年 9 月 29 日</p>
+          <p><span class="label">看點：</span>〈Feel Special〉回歸第一週的舞台。和〈CHEER UP〉放在一起看，能感受到她們從青春可愛走到優雅成熟的變化，副歌整齊的手部動作和隊形很好看。</p>
+          <a class="btn" href="https://www.youtube.com/watch?v=spy6VkgrEFM" target="_blank" rel="noopener">看舞台（節目官方頻道）</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><img src="../images/twice/lollipop-mini.svg" alt=""></div>
+
+    <!-- ===== 區塊 5：成員亮點 =====
+         藝名、亮點介紹必填；擔當／位置、代表片段選填。
+         亮點內容依可查證的公開表演與作品撰寫 -->
+    <section>
+      <div class="container">
+        <h2>成員亮點</h2>
+        <p class="section-intro">九個人一次記不完沒關係，先找一個讓你眼睛一亮的就好。</p>
+        <div class="grid">
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">N</div>
+            <h3>Nayeon</h3>
+            <p class="position">團裡年紀最大</p>
+            <p>TWICE 第一位 solo 出道的成員，2022 年的〈POP!〉明亮俏皮、超有活力。她的 solo 專輯還登上美國 Billboard 200 第 7 名。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">J</div>
+            <h3>Jeongyeon</h3>
+            <p>想聽她的歌聲，可以先找〈Takedown〉：2025 年她和 Jihyo、Chaeyoung 一起為動畫《KPop 獵魔女團》獻唱，創下 TWICE 在 Billboard Hot 100 的最高名次。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">M</div>
+            <h3>Momo</h3>
+            <p class="position">主舞</p>
+            <p>團裡最具代表性的舞者之一，動作力道和節奏感都很強。2023 年和 Sana、Mina 組成日本小分隊 MISAMO。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">S</div>
+            <h3>Sana</h3>
+            <p>〈CHEER UP〉裡那句紅到變成流行語的「shy shy shy」就是她唱的。也是小分隊 MISAMO 的成員。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">J</div>
+            <h3>Jihyo</h3>
+            <p class="position">隊長</p>
+            <p>在 JYP 當了超過十年練習生才出道的隊長。2023 年 solo 出道，主打歌〈Killin' Me Good〉所在的專輯裡，多數歌曲都有她參與作詞作曲。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">M</div>
+            <h3>Mina</h3>
+            <p class="position">主舞</p>
+            <p>從小學古典芭蕾，跳舞特別優雅，被公認是團裡最強的舞者之一。也是小分隊 MISAMO 的成員。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">D</div>
+            <h3>Dahyun</h3>
+            <p class="position">Rapper</p>
+            <p>團裡的 Rapper，〈Feel Special〉中段那段 rap 就是她，在一首溫柔的歌裡帶出節奏感。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">C</div>
+            <h3>Chaeyoung</h3>
+            <p class="position">Rapper</p>
+            <p>TWICE 的官方 LOGO 就是她設計的。2025 年發行第一張 solo 正規專輯《LIL FANTASY vol.1》，從作詞、作曲到製作都親自參與。</p>
+          </article>
+
+          <article class="card member">
+            <div class="avatar" aria-hidden="true">T</div>
+            <h3>Tzuyu</h3>
+            <p class="position">忙內（團裡年紀最小的成員）</p>
+            <p>來自台灣的忙內。2024 年 solo 出道，〈Run Away〉一改團體的甜美路線，走大膽帥氣的風格。</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><img src="../images/twice/lollipop-mini.svg" alt=""></div>
+
+    <!-- ===== 區塊 6：下一步去哪裡 ===== -->
+    <section>
+      <div class="container">
+        <div class="next-step">
+          <h2>喜歡的話，下一步可以這樣做</h2>
+          <p>如果聽完覺得「欸，還不錯」，可以把三首入門歌曲都聽一輪，再順著喜歡的成員去聽她的 solo 作品，或是看看日本小分隊 MISAMO。TWICE 的歌很多，慢慢來就好！</p>
+          <a class="btn" href="../index.html">回首頁看其他女團</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 頁尾（和首頁一致） ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>本站為生成式 AI 課程作業，非官方網站。</p>
+      <p>所有歌曲、影片與圖片版權屬於原權利人。</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

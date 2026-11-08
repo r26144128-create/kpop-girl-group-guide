@@ -1,0 +1,249 @@
+/* =========================================
+   NMIXX 專屬樣式：海洋專輯封面首屏＋鯨尾段落分隔
+   規則：每個選擇器都以 .group-nmixx 開頭，只影響 NMIXX 頁面
+   設計依據（觀察官方手燈）：白色光滑圓潤的鯨魚浮在寶藍漩渦海浪上、尾巴翹起、
+   噴出透明水柱；整體是白色＋透明感＋寶藍，背景帶淡淡珠光粉彩。
+   這裡是原創詮釋，不畫手燈的球殼、握把等商品本體造型。
+   ========================================= */
+
+/* ---------- 1. 顏色 ---------- */
+.group-nmixx {
+  --bg: #f3f6fc;        /* 閱讀區底色：很淡的藍白 */
+  --navy: #0f2a6b;      /* 深海軍藍：首屏文字 */
+  --cobalt: #1d5cc0;    /* 寶藍：中層海浪 */
+  --cyan: #4ea8ea;      /* 青藍：後層海浪 */
+  --whale-w: clamp(220px, 25vw, 330px);  /* 鯨魚寬度，水柱位置跟著它計算 */
+}
+
+/* ---------- 2. 首屏：海洋專輯封面 ---------- */
+.group-nmixx .ocean-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(620px, 90vh, 780px);
+  padding: 22px 0 300px;
+  color: var(--navy);
+  /* 珠光粉彩背景 */
+  background: linear-gradient(160deg, #eceffd 0%, #e2f1f8 50%, #f5ece9 100%);
+}
+
+/* 第 1 層：珠光光暈＋細細的弧線 */
+.group-nmixx .ocean-light {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(214, 200, 255, 0.55), transparent 50%),
+    radial-gradient(ellipse at 85% 30%, rgba(190, 240, 236, 0.6), transparent 50%),
+    repeating-radial-gradient(circle at 110% 115%, rgba(255, 255, 255, 0.8) 0 1px, transparent 1px 16px);
+  pointer-events: none;
+}
+
+.group-nmixx .hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.group-nmixx .hero-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.group-nmixx .hero-topline .back-link { color: var(--navy); }
+.group-nmixx .hero-topline .kicker { color: var(--main); }
+
+/* 第 3 層：NMIXX 大字（水柱從它後面穿過） */
+.group-nmixx .wordmark {
+  position: relative;
+  z-index: 2;
+  margin: clamp(40px, 7vh, 80px) 0 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(4.6rem, 17vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+  text-shadow: 0 4px 0 #ffffff, 0 12px 30px rgba(15, 42, 107, 0.18);
+}
+
+/* 一句話介紹：白色半透明底 */
+.group-nmixx .ocean-hero .one-liner {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  margin: 28px auto 0;
+  padding: 12px 20px;
+  text-align: center;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(31, 79, 168, 0.15);
+  border-radius: 12px;
+}
+
+/* 第 2 層：鯨魚噴出的透明水柱，對準鯨魚的噴氣孔 */
+.group-nmixx .water-column {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 70px;
+  bottom: calc(118px + var(--whale-w) * 0.36);
+  width: 46px;
+  transform: translateX(-50%);
+  border-radius: 23px 23px 6px 6px;
+  background: linear-gradient(to top,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(232, 244, 255, 0.75) 55%,
+    rgba(200, 228, 255, 0.25) 100%);
+  box-shadow: inset 0 0 0 2px rgba(110, 170, 235, 0.45), 0 0 24px rgba(255, 255, 255, 0.7);
+}
+
+/* 水柱頂端的水花 */
+.group-nmixx .water-column::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  width: 90px;
+  height: 36px;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(circle at 20% 60%, rgba(255, 255, 255, 0.95) 0 6px, transparent 7px),
+    radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.95) 0 8px, transparent 9px),
+    radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.95) 0 6px, transparent 7px);
+}
+
+/* 第 4 層：寶藍漩渦海浪 */
+.group-nmixx .wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+
+.group-nmixx .wave-back {
+  bottom: 96px;
+  height: 200px;
+  z-index: 2;
+  fill: var(--cyan);
+  animation: nmixx-wave 8s ease-in-out infinite alternate;
+}
+
+.group-nmixx .wave-mid {
+  bottom: 30px;
+  height: 170px;
+  z-index: 4;
+  fill: var(--cobalt);
+}
+
+.group-nmixx .wave-front {
+  bottom: -1px;
+  height: 110px;
+  z-index: 6;
+  fill: var(--bg);   /* 和下方內容的底色接起來 */
+}
+
+@keyframes nmixx-wave {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-3%); }
+}
+
+/* 第 5 層：浮在浪頭上的白色鯨魚，肚子泡在中層海浪裡 */
+.group-nmixx .hero-whale {
+  position: absolute;
+  z-index: 3;
+  width: var(--whale-w);
+  left: calc(50% - var(--whale-w) * 0.32);   /* 讓噴氣孔對準水柱 */
+  bottom: 118px;
+  animation: nmixx-float 5s ease-in-out infinite alternate;
+}
+
+@keyframes nmixx-float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-6px); }
+}
+
+/* 躍出水面的海豚（尾巴藏在中層海浪後面） */
+.group-nmixx .hero-dolphin {
+  position: absolute;
+  z-index: 3;
+  right: 8%;
+  bottom: 140px;
+  width: clamp(120px, 14vw, 190px);
+  animation: nmixx-leap 4s ease-in-out infinite alternate;
+}
+
+@keyframes nmixx-leap {
+  from { transform: translateY(0) rotate(0deg); }
+  to   { transform: translateY(-12px) rotate(-3deg); }
+}
+
+/* 海裡上浮的氣泡 */
+.group-nmixx .bubbles span {
+  position: absolute;
+  z-index: 5;
+  bottom: 40px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  animation: nmixx-bubble 7s linear infinite;
+}
+.group-nmixx .bubbles span:nth-child(1) { left: 8%;  animation-delay: 0s; }
+.group-nmixx .bubbles span:nth-child(2) { left: 20%; width: 8px; height: 8px; animation-delay: 2.5s; }
+.group-nmixx .bubbles span:nth-child(3) { left: 33%; width: 16px; height: 16px; animation-delay: 5s; }
+.group-nmixx .bubbles span:nth-child(4) { left: 64%; width: 9px; height: 9px; animation-delay: 1.5s; }
+.group-nmixx .bubbles span:nth-child(5) { left: 76%; animation-delay: 4s; }
+.group-nmixx .bubbles span:nth-child(6) { left: 92%; width: 14px; height: 14px; animation-delay: 6s; }
+
+@keyframes nmixx-bubble {
+  0%   { transform: translateY(0); opacity: 0; }
+  15%  { opacity: 1; }
+  100% { transform: translateY(-110px); opacity: 0; }
+}
+
+/* ---------- 3. 基本資料卡：往上疊在海浪上 ---------- */
+.group-nmixx .profile-section {
+  position: relative;
+  z-index: 7;
+  margin-top: -70px;
+  padding-top: 0;
+}
+
+/* ---------- 4. 段落分隔：鯨尾＋寶藍水波線 ---------- */
+.group-nmixx .section-divider::before,
+.group-nmixx .section-divider::after {
+  border-bottom: none;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 12'%3E%3Cpath d='M0 6 C10 0 10 0 20 6 C30 12 30 12 40 6' fill='none' stroke='%231f4fa8' stroke-width='2'/%3E%3C/svg%3E") repeat-x center / 40px 12px;
+  opacity: 0.55;
+}
+
+/* ---------- 5. 手機版 ---------- */
+@media (max-width: 640px) {
+  .group-nmixx { --whale-w: 50vw; }
+
+  .group-nmixx .ocean-hero {
+    min-height: 640px;
+    padding-bottom: 280px;
+  }
+
+  .group-nmixx .wordmark { font-size: 23vw; margin-top: 40px; }
+  .group-nmixx .ocean-hero .one-liner { font-size: 1rem; margin-top: 22px; }
+  .group-nmixx .water-column { width: 34px; top: 60px; }
+
+  /* 波浪在窄螢幕上變矮，避免太陡 */
+  .group-nmixx .wave-back { height: 140px; bottom: 90px; }
+  .group-nmixx .wave-mid { height: 120px; }
+  .group-nmixx .hero-whale { bottom: 96px; }
+  .group-nmixx .water-column { bottom: calc(96px + var(--whale-w) * 0.36); }
+
+  /* 海豚移到左邊，避開鯨魚的尾巴 */
+  .group-nmixx .hero-dolphin {
+    width: 24vw;
+    right: auto;
+    left: 3%;
+    bottom: 118px;
+  }
+
+  .group-nmixx .profile-section { margin-top: -56px; }
+}
