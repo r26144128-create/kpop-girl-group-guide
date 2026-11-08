@@ -5,7 +5,8 @@
 - 製作方式：先寫 `CLAUDE.md` 規則，再請 AI 依規則製作網頁
 - 技術：原生 HTML、CSS、JavaScript
 - 目前收錄：NMIXX（開發預覽版）
-- 網站網址：<!-- TODO: 上傳 GitHub Pages 後補上網址 -->【待補：GitHub Pages 網址】
+- 公開網站：https://r26144128-create.github.io/kpop-girl-group-guide/
+- Repository：https://github.com/r26144128-create/kpop-girl-group-guide
 
 ## 檔案結構
 
